@@ -1,0 +1,122 @@
+ion-content{
+    --ion-background-color: transparent;   
+    height: 100%;
+}
+
+
+#span_EmailPassword{
+    color: orange;
+}
+
+span{
+    font-weight: bold;
+    color: red;
+}
+
+.inputsR{
+    position: center;
+    width: 100%;
+    margin-top: 5px;
+}
+.logoLogin{ 
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.IconLogin{
+    border-color: #000;
+    border-width: 1px 0px 0px 1px;
+    border-style: solid;
+    box-shadow: 10px 10px 2px 1px #000;    
+}
+
+.body{
+    background-image: url('../../assets/img/backgroundMate.jpg');    
+    //background: linear-gradient(#329d9c, #7be495) !important;
+    background-repeat: no-repeat;
+	background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+.page_Titulo{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-family: Verdana,Arial;
+    font-size: 27px;   
+    font-weight: bold;
+
+    padding-top: 10px;
+    text-align: center;
+    height: 50px;
+    color: white;
+
+    //background-color: black;
+}
+
+.page_Titulo_QR{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-family: Verdana,Arial;
+    font-size: 26px;    
+    font-weight: bold;
+}
+
+.button-Login{
+    font-weight: bold;
+}
+
+
+ion-button{
+    background-color: #2fdf75;
+    color: black;
+    font-weight: bold;
+
+    border-color: black;
+    border-width: 0.5px;
+    border-style: solid;    
+    box-shadow: 8px 3px 3px black;
+}
+
+.boxInputs{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.botton-login-register{
+    bottom: 0;
+    margin-left: 10px;
+    margin-right: 10px;    
+}
+
+div, span, ion-label, ion-input, ion-grid, ion-button{
+    font-weight: bold;
+    font-family: "Comic Sans MS" !important;
+    --font-family: "Comic Sans MS" !important;
+}
+
+.spinner{
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    transform: translate(-50%,-50%);
+    z-index: 41;
+    border: 4px solid rgba(0, 0, 0, .1);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border-left-color: green;
+    border-top-color: white;
+    border-right-color: white;
+    border-bottom-color: white;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

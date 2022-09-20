@@ -1,3 +1,23 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
+<ion-app class="scanner-hide">
+  <div id="divSuperpuesto"  [style.display]="splash ? 'flex' : 'none'"> 
+    <div id="divEdificio">
+        <div class="tracking-in-contract-bck-top">
+            Balderrama Jhossymar
+        </div>     
+          
+        <div id="divSplashh">                                         
+            <img id="icono-splash" src="../assets/img/SinQR.png" alt="icono-splash">                                       
+        </div>        
+                    
+        <div class="tracking-in-contract-bck-bottom">
+            Practicas Profesionales 4ºA
+        </div> 
+    </div>        
+  </div>    
+
+  <ion-router-outlet id="main" class="body"></ion-router-outlet>
 </ion-app>
+
+<div class="scanner-ui">
+  
+</div>

@@ -1,20 +1,60 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" style="width: 100%;">
+  <ion-grid class="grid-flotante-top" style="height: 100%; display: flex; flex-flow: column;border: 3px solid #2fdf75;margin-left: 5px;margin-right: 5px;">
+  
+    <ion-card-content class="ion-text-center"> 
+      <ion-icon name="person-sharp" align="center" style="font-size: 38px;"></ion-icon>
+      <ion-card-title style="font-weight: bold;">              
+        Bienvenido:         
+      </ion-card-title>
+      {{email}}         
+    </ion-card-content> 
+    
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-label style="font-weight: bold;height: 80px;text-align: center;padding-top: 20px;font-size: 28px;">          
+      Créditos:
+    </ion-label>
+    <ion-grid class="grid-flotante-top" align="center" style="margin-top: 15px;">
+      <ion-toolbar color="success">
+        <ion-item>         
+          <ion-input style="font-size: 115px;color: white;text-align: center;" type="text" readonly>${{creditoView}}</ion-input>
+          <ion-icon name="cash-outline" style="font-size: 36px;color: white;"></ion-icon>
+        </ion-item>
+      </ion-toolbar>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+      <ion-button (click)="onEscanear()" color="success" style="height: 15%; width: 60%;margin-left: 15%;margin-right: 15%;align-items: center;font-weight: bold;margin-top: 25%;" align="center">
+        <label style="font-size:24px;">
+          Escanear
+        </label>
+        <ion-icon name="qr-code-outline" style="font-size: 32px; margin-left: 10%;margin-top: 80px;margin-bottom: 80px;"></ion-icon>
+      </ion-button>
+    </ion-grid>
+
+    <div *ngIf="!load" class="spinner"></div>
+  </ion-grid>
 </ion-content>
+
+<ion-footer style="width: 100%;">
+  <ion-grid class="grid-flotante-top" style="height: 20%; display: flex; flex-flow: column;">
+    <ion-toolbar color="success">
+      <div align="center">
+        <ion-item style="width: 100%;">
+          <ion-button color="success" style="width: 60%; height: 70%;font-size: 14px;margin-right: 4%;font-weight: bold;"
+          (click)="onLogout()"
+          >
+            <ion-icon name="arrow-back-circle" style="margin-right: 2px;"></ion-icon>
+            Cerrar Sesión           
+          </ion-button>
+
+          <ion-button color="success" style="width: 40%; height: 70%;font-size: 12px;font-weight: bold;"
+          (click)="onBorrarCredito()"
+          >
+          <ion-icon name="trash-outline"></ion-icon>
+            Borrar Créditos
+          </ion-button>
+        </ion-item>
+      </div>
+    </ion-toolbar>
+  </ion-grid>
+</ion-footer>
+
+
